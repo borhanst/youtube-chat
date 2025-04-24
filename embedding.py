@@ -16,7 +16,7 @@ class BaseEmbedding:
             persist_directory="./chroma_db",
             collection_name="youtube_chat",
         )
-        self.retriever = self.vector_db.as_retriever(search_kwargs={"k": 3, "filter":{'source': kwargs.get("video_id")}})
+        self.retriever = self.vector_db.as_retriever(search_kwargs={"k": 3, }) #TODO: add metadata filter
         
 
     def document_split(self):

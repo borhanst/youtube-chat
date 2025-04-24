@@ -74,12 +74,13 @@ def main():
         messages.append(("user", message))
         with st.chat_message("user"):
             st.write(message)
-        with st.chat_message("ai"):
-            st.spinner()
-            ai_response = get_llm_response(message)
-            if ai_response:
-                messages.append(("ai", ai_response))
-                st.write(ai_response)
+        with st.spinner():
+            with st.chat_message("ai"):
+                
+                ai_response = get_llm_response(message)
+                if ai_response:
+                    messages.append(("ai", ai_response))
+                    st.write(ai_response)
 
 
 if __name__ == "__main__":
