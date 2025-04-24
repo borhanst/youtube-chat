@@ -1,0 +1,18 @@
+[project]
+name = "youtube-chat"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "chromadb>=0.6.3",
+    "langchain>=0.3.24",
+    "langchain-chroma>=0.2.3",
+    "langchain-community>=0.3.22",
+    "langchain-google-genai>=2.1.3",
+    "python-dotenv>=1.1.0",
+    "pytube>=15.0.0",
+    "streamlit>=1.44.1",
+    "streamlit-player>=0.1.5",
+    "youtube-transcript-api>=1.0.3",
+]
